@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>APTML Scan Report</title>
+    <style>
+        body {
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #000;
+            font-family: Consolas, monaco, monospace;
+            font-size: 100%;
+            line-height: 1.4;
+            overflow-x: auto;
+            overflow-y: auto;
+            min-width: 800px;
+            position: relative;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        td {
+            text-align: left;
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        tbody:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #FFFFCC;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>APTML scan Report</h2>
+    <table>
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Item</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr>
+            <td rowspan="11">1</td>
+            <td>IP address</td>
+            <td>192.168.1.21</td>
+        </tr>
+        <tr>
+            <td>Port number</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Source IP address</td>
+            <td>192.168.1.13</td>
+        </tr>
+        <tr>
+            <td>Product name</td>
+            <td>vsftpd</td>
+        </tr>
+        <tr>
+            <td>Vuln name</td>
+            <td>VSFTPD v2.3.4 Backdoor Command Execution</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>shell</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>This module exploits a malicious backdoor that was added to the VSFTPD download archive. This backdoor was introduced into the vsftpd-2.3.4.tar.gz archive between June 30th 2011 and July 1st 2011 according to the most recent information available. This backdoor was removed on July 3rd 2011.</td>
+        </tr>
+        <tr>
+            <td>Exploit module</td>
+            <td>exploit/unix/ftp/vsftpd_234_backdoor</td>
+        </tr>
+        <tr>
+            <td>Target</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Payload</td>
+            <td>payload/cmd/unix/interact</td>
+        </tr>
+        <tr>
+            <td>Reference</td>
+            <td>[OSVDB]<br>73573<br><br>[URL]<br>http://pastebin.com/AetT9sS5<br><br>[URL]<br>http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html<br><br></td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+            <td rowspan="11">2</td>
+            <td>IP address</td>
+            <td>192.168.1.21</td>
+        </tr>
+        <tr>
+            <td>Port number</td>
+            <td>5432</td>
+        </tr>
+        <tr>
+            <td>Source IP address</td>
+            <td>192.168.1.13</td>
+        </tr>
+        <tr>
+            <td>Product name</td>
+            <td>postgresql</td>
+        </tr>
+        <tr>
+            <td>Vuln name</td>
+            <td>PostgreSQL for Linux Payload Execution</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>meterpreter</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>On some default Linux installations of PostgreSQL, the postgres service account may write to the /tmp directory, and may source UDF Shared Libraries from there as well, allowing execution of arbitrary code. This module compiles a Linux shared object file, uploads it to the target host via the UPDATE pg_largeobject method of binary injection, and creates a UDF (user defined function) from that shared object. Because the payload is run as the shared object's constructor, it does not need to conform to specific Postgres API versions.</td>
+        </tr>
+        <tr>
+            <td>Exploit module</td>
+            <td>exploit/linux/postgres/postgres_payload</td>
+        </tr>
+        <tr>
+            <td>Target</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Payload</td>
+            <td>payload/linux/x86/meterpreter/bind_tcp_uuid</td>
+        </tr>
+        <tr>
+            <td>Reference</td>
+            <td>[URL]<br>http://www.leidecker.info/pgshell/Having_Fun_With_PostgreSQL.txt<br><br></td>
+        </tr>
+    </tbody>
+    
+</table>
+</body>
+</html>

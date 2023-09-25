@@ -1,0 +1,11 @@
+{
+    "rhost": "154.73.103.14",
+    "os_type": 15,
+    "113": {
+        "prod_name": "unknown",
+        "version": 0.0,
+        "protocol": "tcp",
+        "target_path": "",
+        "exploit": []
+    }
+}

@@ -1,0 +1,1 @@
+2021/03/26 03:15:51,192.168.1.21,23,tcp,telnet,0.0,Sun Solaris Telnet Remote Authentication Bypass Vulnerability,This module exploits the argument injection vulnerability in the telnet daemon (in.telnetd) of Solaris 10 and 11.,shell,exploit/solaris/telnet/fuser,0,payload/cmd/unix/bind_perl,[CVE]@2007-0882@@[OSVDB]@31881@@[BID]@22512@@
